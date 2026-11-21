@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://buxg6l7dxm1ah"]
+
+[ext_resource type="Texture2D" uid="uid://1d7eexj3bkmg" path="res://icon.svg" id="1_annr2"]
+[ext_resource type="Script" uid="uid://ck5gr3fnm8wib" path="res://boat.gd" id="1_viw7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqhi6"]
+size = Vector2(56, 53)
+
+[node name="boat" type="Area2D" unique_id=1323668789]
+script = ExtResource("1_viw7v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1716907959]
+modulate = Color(1, 0.33333334, 0.33333334, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_annr2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101531948]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_aqhi6")

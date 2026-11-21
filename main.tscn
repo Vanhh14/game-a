@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b0edelq78t3rx"]
+
+[ext_resource type="Script" uid="uid://cb47upv3gnyjs" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bo4opnevbgyhh" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c417nbceu2fuu" path="res://spawner.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://buxg6l7dxm1ah" path="res://boat.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dkmk0m3k0mq6l" path="res://stake.tscn" id="5_lquwl"]
+
+[sub_resource type="Curve2D" id="Curve2D_0xm2m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1288, 68, 0, 0, 0, 0, 634, 114, 0, 0, 0, 0, 746, 292, 0, 0, 0, 0, 1090, 402, 0, 0, 0, 0, 846, 586, 0, 0, 0, 0, 545, 468, 0, 0, 0, 0, 243, 610, 0, 0, 0, 0, -145, 490)
+}
+point_count = 8
+
+[node name="Node2D" type="Node2D" unique_id=22305672]
+script = ExtResource("1_1bvp3")
+
+[node name="player" parent="." unique_id=1512400842 instance=ExtResource("1_ig7tw")]
+position = Vector2(-1, 0)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2017453866]
+curve = SubResource("Curve2D_0xm2m")
+script = ExtResource("2_0xm2m")
+boat_scene = ExtResource("3_h2yge")
+stake_scene = ExtResource("5_lquwl")
+
+[node name="HpLabel" type="Label" parent="." unique_id=1649142936]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0

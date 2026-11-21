@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bo4opnevbgyhh"]
+
+[ext_resource type="Script" uid="uid://cr8i703aeg5l3" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://72fkh0sj4trh" path="res://arrow.tscn" id="2_onrkg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sh265"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqhi6"]
+radius = 30.594116
+
+[node name="player" type="CharacterBody2D" unique_id=1512400842]
+script = ExtResource("1_4flbx")
+arrow_scene = ExtResource("2_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=67966143]
+scale = Vector2(0.527, 0.5)
+texture = SubResource("CompressedTexture2D_sh265")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334696729]
+shape = SubResource("CircleShape2D_aqhi6")
